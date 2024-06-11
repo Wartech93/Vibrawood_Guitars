@@ -11,6 +11,44 @@ export const ADD_PROFILE = gql`
     }
   }
 `;
+export const ADD_USER = gql`
+  mutation addUser(
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $password: String!
+  ) {
+    addUser(
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      password: $password
+    ) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;
+
+export const ADD_ORDER = gql`
+  mutation addOrder($products: [ID]!) {
+    addOrder(products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
+        description
+        price
+        quantity
+        category {
+          name
+        }
+      }
+    }
+  }
+`;
 
 export const ADD_SKILL = gql`
   mutation addSkill($profileId: ID!, $skill: String!) {
@@ -21,6 +59,15 @@ export const ADD_SKILL = gql`
     }
   }
 `;
+export const ADD_GUITAR = gql`
+  mutation addGuitar($profileId: ID!, $guitar: String!) {
+  addGuitar(profileId: $profileId, guitar: $guitar){
+  _id
+  name
+  brand
+    }
+  }
+    `;
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
