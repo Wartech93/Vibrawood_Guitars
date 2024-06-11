@@ -5,10 +5,9 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home';
 import Detail from './pages/Detail';
-import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Error from './pages/Error';
+import NoMatch from './pages/NoMatch';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
@@ -16,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    error: <Error />,
+    error: <NoMatch />,
     children: [
       {
         index: true,
@@ -27,12 +26,6 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      }, {
-        path: '/me',
-        element: <Profile />
-      }, {
-        path: '/profiles/:profileId',
-        element: <Profile />
       }, {
         path: '/success',
         element: <Success />
