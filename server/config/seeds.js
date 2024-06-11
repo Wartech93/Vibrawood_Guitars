@@ -59,7 +59,7 @@ db.once('open', async () => {
       'This is a hand made Custom Shop instrument. Custom Color Electron Blue Metallic Superlite Paulownia body with Maple neck, bound Rosewood fretboard, pearl block inlays, lightweight Hipshot tuners, and custom wound vintage style pickups and a NOS vintage paper in oil capacitor from Ukraine in the tone circuit matched to this bass guitar. Very lightweight and resonant, this bass has that low mid growl heard on stage and in the best recordings throughout the 60s, 70s and 80s!',
       image: 'vibrawoodbass2.jpg',
       price: 1499.99,
-      quantity: 100
+      quantity: 3
     },
     {
       name: 'ARTIST CUSTOM SHOP JAZZ BASS ELECTRON BLUE METALLIC',
