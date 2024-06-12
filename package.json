@@ -22,6 +22,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.5.0",
+    "react-icons": "^5.2.1",
     "stripe": "^15.10.0"
   }
 }

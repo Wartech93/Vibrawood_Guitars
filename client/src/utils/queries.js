@@ -16,6 +16,15 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+export const GET_CATEGORIES = gql`
+  query getCategories {
+    categories{
+      name
+      images
+    }
+  }
+`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
@@ -40,10 +49,11 @@ export const QUERY_ALL_PRODUCTS = gql`
 `;
 
 export const QUERY_CATEGORIES = gql`
-  {
+  query GetCategories {
     categories {
       _id
       name
+      image
     }
   }
 `;

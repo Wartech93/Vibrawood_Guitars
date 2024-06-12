@@ -8,6 +8,7 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
+
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
 
@@ -42,25 +43,17 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Choose a Category:</h2>
-      {categories.map((item) => (
-        <button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}
-      <button
-        onClick={() => {
-          handleClick('');
-        }}
-      >
-        All
-      </button>
+    <div className="w-screen bg-gray-200 py-10">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {categories.map((category, index) => (
+            <div key={index} className="bg-gray-300 p-4 rounded-lg text-center">
+              <img src={`/images/${category.image}`} alt={category.name} className="w-full h-40 object-cover mb-4" />
+              <h3 className="text-lg font-semibold">{category.name.toUpperCase()}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
