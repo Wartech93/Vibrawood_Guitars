@@ -37,7 +37,7 @@ function Detail() {
         price: product.price,
         quantity: product.quantity,
       };
-      
+
       setCurrentProduct(item);
     }
     // retrieved from server
@@ -100,7 +100,9 @@ function Detail() {
 
           <h2>{currentProduct.name}</h2>
 
+
          
+
 
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
@@ -116,7 +118,9 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
+
           /> 
+          
           <p>{currentProduct.description}</p>
         </div>
       ) : null}
