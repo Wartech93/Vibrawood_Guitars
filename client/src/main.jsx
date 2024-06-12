@@ -11,6 +11,7 @@ import NoMatch from './pages/NoMatch';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       }, {
         path: '/products/:id',
         element: <Detail />
-      }
+      }, 
     ]
   }
 ])

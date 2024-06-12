@@ -52,6 +52,7 @@ const resolvers = {
       throw AuthenticationError;
     },
     checkout: async (parent, args, context) => {
+      console.log("checkout is running");
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
       const line_items = [];
