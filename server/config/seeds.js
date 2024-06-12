@@ -8,9 +8,22 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
 
   const categories = await Category.insertMany([
-    { name: 'Guitar' },
-    { name: 'Bass' },
-    { name: 'Electronics' },
+    { 
+      name: 'Guitar',
+      image: 'vibrawood2.jpg'
+     },
+    { 
+      name: 'Bass',
+      image: 'vibrawoodbass11.jpg'
+     },
+    { 
+      name: 'Sale',
+      image: 'vibrawoodbass6.jpg'
+    },
+    { 
+      name: 'View All',
+      image: 'vibrawoodbass7.jpg'
+    }
   ]);
 
   console.log('categories seeded');

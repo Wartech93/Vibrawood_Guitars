@@ -34,6 +34,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+
     <div>
       <ApolloProvider client={client}>
         <div className='h-screen'>
@@ -44,6 +45,7 @@ function App() {
           </div>
           <Footer />
           </StoreProvider>
+
         </div>
       </ApolloProvider>
     </div>
