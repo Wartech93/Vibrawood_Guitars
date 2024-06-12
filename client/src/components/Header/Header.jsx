@@ -1,22 +1,22 @@
-
+import Nav from "./Nav";
 import ShowLogin from "./ShowLogin";
-import { Link } from "react-router-dom";
+
 
 function Header() {
 
   return (
     
-    <header className="">
-        
-      <h1><Link to="/">Vibrawood Guitars</Link></h1>
+    <header className="h-1/2 bg-slate-600 flex">
 
-      <nav>
-        <ShowLogin/>
-      </nav>
+        <Nav/>
 
+        <div className="flex flex-col">
+            <ShowLogin/>
+            <h1 className="text-4xl">Vibrawood Guitars</h1>
+        </div>
+  
     </header>
   );
 }
-
 
 export default Header;
