@@ -9,6 +9,7 @@ function ProductItem(item) {
 
   const {
     image,
+    description,
     name,
     _id,
     price,
@@ -48,6 +49,7 @@ function ProductItem(item) {
         <p>{name}</p>
       </Link>
       <div>
+        
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>

@@ -32,6 +32,7 @@ function Detail() {
       const item = {
         image: product.image,
         name: product.name,
+        description: product.description,
         _id: product._id,
         price: product.price,
         quantity: product.quantity,
@@ -99,7 +100,7 @@ function Detail() {
 
           <h2>{currentProduct.name}</h2>
 
-          <p>{currentProduct.description}</p>
+         
 
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
@@ -115,7 +116,8 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
-          />
+          /> 
+          <p>{currentProduct.description}</p>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
