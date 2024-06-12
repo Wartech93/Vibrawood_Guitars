@@ -36,7 +36,7 @@ const typeDefs = `
     token: ID
     user: User
   }
- input ProductInput {
+     input ProductInput {
     _id: ID
     purchaseQuantity: Int
     name: String
@@ -44,6 +44,8 @@ const typeDefs = `
     price: Float
     quantity: Int
   }
+
+
   type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
