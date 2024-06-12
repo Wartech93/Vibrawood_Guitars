@@ -9,6 +9,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { StoreProvider } from './utils/GlobalState';
+import './tailwind.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
