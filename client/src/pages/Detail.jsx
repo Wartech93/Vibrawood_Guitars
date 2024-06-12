@@ -100,6 +100,10 @@ function Detail() {
 
           <h2>{currentProduct.name}</h2>
 
+
+         
+
+
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
@@ -114,7 +118,9 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
-          />
+
+          /> 
+          
           <p>{currentProduct.description}</p>
         </div>
       ) : null}
