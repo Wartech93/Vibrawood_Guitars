@@ -39,7 +39,7 @@ function App() {
         <div className='h-screen'>
           <StoreProvider>
           <Header />
-          <div className='h-full'>
+          <div className='h-full overflow-scroll'>
             <Outlet />
           </div>
           <Footer />

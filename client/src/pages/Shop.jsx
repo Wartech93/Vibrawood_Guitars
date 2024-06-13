@@ -3,9 +3,9 @@ import Cart from "../components/Cart";
 
 const Home = () => {
   return (
-    <div className="container">
-      <ProductList />
+    <div className="container w-screen">
       <Cart />
+      <ProductList />
     </div>
   );
 };
