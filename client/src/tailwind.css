@@ -12,6 +12,8 @@
  } 
   
  .secondaryFont {
-    font-family: '';
+    font-family: 'Kanit';
+    font-size: 1.6rem;
+    font-weight: 600;
  }
 

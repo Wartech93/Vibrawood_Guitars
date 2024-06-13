@@ -15,7 +15,7 @@ function Header() {
 </div>
 
 
-<ul className="flex flex-col items-center titillium-web-extralight">
+<ul className="flex flex-col items-center secondaryFont">
    
     <li className="mb-5 text-indigo-950"><Link to="/">HOME</Link></li>
 
@@ -48,7 +48,7 @@ function Header() {
                     <div className="flex flex-col">
 
                         <h1 className="text-6xl mb-2 text-amber-50 mainFont">Vibrawood</h1>
-                        <p className="mb-5 text-amber-50 secondaryFont">ONE OF A KIND GUITARS</p>
+                        <p className="mb-5 text-amber-50 pl-8 secondaryFont">ONE OF A KIND GUITARS</p>
                         <button className="bg-amber-50 secondaryFont text-indigo-950 h-1/5 rounded">SHOP</button>
 
                     </div>

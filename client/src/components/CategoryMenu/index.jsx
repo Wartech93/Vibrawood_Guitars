@@ -43,7 +43,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div className="flex h-1/2 mx-20">
+    <div className="flex h-1/2 mx-20 secondaryFont">
       
           {categories.map((category, index) => (
 
