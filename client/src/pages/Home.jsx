@@ -4,7 +4,7 @@ import Map from "../components/Map/map";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="bg-indigo-950 h-full">
       <CategoryMenu />
       <Map />  
       <Cart />

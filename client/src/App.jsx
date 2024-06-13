@@ -39,7 +39,7 @@ function App() {
         <div className='h-screen'>
           <StoreProvider>
           <Header />
-          <div>
+          <div className='h-full'>
             <Outlet />
           </div>
           <Footer />
