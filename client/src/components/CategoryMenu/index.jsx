@@ -43,13 +43,13 @@ function CategoryMenu() {
   };
 
   return (
-    <div className="flex h-1/2">
+    <div className="flex h-1/2 mx-20">
       
           {categories.map((category, index) => (
 
             <div key={index} className="flex flex-col text-center w-full items-center justify-center">
-              <img src={`/images/${category.image}`} alt={category.name} className="bg-amber-50 w-3/4 p-1 rounded h-2/3 object-cover mb-4" />
-              <h3 className="text-lg font-semibold">{category.name.toUpperCase()}</h3>
+              <img src={`/images/${category.image}`} alt={category.name} className="w-3/4 shadow-lg rounded h-2/3 object-cover mb-4" />
+              <h3 className="text-lg font-semibold text-amber-50">{category.name.toUpperCase()}</h3>
             </div>
 
           ))}
