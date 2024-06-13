@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div className="container">
       <CategoryMenu />
-      <Map />  
+      <div className="map w-screen">
+        <Map />
+      </div>
       <Cart />
     </div>
   );
