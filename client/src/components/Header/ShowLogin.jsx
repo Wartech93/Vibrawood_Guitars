@@ -2,6 +2,7 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import Login from '../Login_Modal/Modal'
+import {Button} from "flowbite-react";
 
 function ShowLogin() {
 
@@ -26,9 +27,13 @@ function ShowLogin() {
 
     return (
 
-      <ul className="">
+      <ul className="flex flex-row gap-4 mt-4">
         <li className="mx-1">
-          <Link to="/signup">Signup</Link>
+          <Link to="/signup">
+          <Button className='w-14 text-white border-2 border-white-300'>
+          Signup
+          </Button>
+          </Link>
         </li>
         <li>        
            <Login />
