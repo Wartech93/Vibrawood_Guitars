@@ -10,6 +10,8 @@ import NoMatch from './pages/NoMatch';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Shop from './pages/Shop';
+import About from './pages/About.jsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -37,7 +39,10 @@ const router = createBrowserRouter([
       }, {
         path: '/shop',
         element: <Shop />
-      } 
+      }, {
+        path: '/about',
+        element: <About />
+      }
     ]
   }
 ])
