@@ -1,41 +1,43 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Login from '../Login_Modal/Modal'
 
 function ShowLogin() {
-    if (Auth.loggedIn()) {
 
-      return (
 
-        <ul className="flex-row">
+  if (Auth.loggedIn()) {
 
-          <li className="mx-1">
-            <Link to="/orderHistory">Order History</Link>
-          </li>
+    return (
 
-          <li className="mx-1">
-            <a href="/" onClick={() => Auth.logout()}>Logout</a>
-          </li>
+      <ul className="flex-row">
 
-        </ul>
-      );
+        <li className="mx-1">
+          <Link to="/orderHistory">Order History</Link>
+        </li>
 
-    } else {
+        <li className="mx-1">
+          <a href="/" onClick={() => Auth.logout()}>Logout</a>
+        </li>
 
-      return (
-        
-        <ul className="flex-row">
+      </ul>
+    );
 
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
-          </li>
+  } else {
 
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
-          </li>
+    return (
 
-        </ul>
-      );
-    }
+      <ul className="">
+        <li className="mx-1">
+          <Link to="/signup">Signup</Link>
+        </li>
+        <li>        
+           <Login />
+        </li>
+
+      </ul>
+    );
   }
+}
 
-  export default ShowLogin
+export default ShowLogin;
