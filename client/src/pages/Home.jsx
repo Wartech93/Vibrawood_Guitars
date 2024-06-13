@@ -5,8 +5,12 @@ import Map from "../components/Map/map";
 const Home = () => {
   return (
     <div className="container">
+<<<<<<< components
       <CategoryMenu />
       <Map />
+=======
+      <CategoryMenu />    
+>>>>>>> main
       <Cart />
     </div>
   );
