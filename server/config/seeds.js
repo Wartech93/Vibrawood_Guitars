@@ -35,7 +35,7 @@ db.once('open', async () => {
         'Seafoam Green on a Superlite Paulownia body, Maple neck, Rosewood fingerboard, vintage-style custom-wound humbucking pickups with coil split and a NOS vintage paper in oil capacitor from Ukraine in the tone circuit. We used an upgraded six saddle bridge on this guitar for absolute tonal balance and intonation adjustability.',
       image: 'superlite_seafoam.jpg',
       category: categories[0]._id,
-      price: 1649.00,
+      price: 1649.99,
       quantity: 2
     },
     {
@@ -44,7 +44,7 @@ db.once('open', async () => {
         'Candy Apple Red on a Superlite Paulownia body, Maple neck, Rosewood fingerboard, Vintage style Custom wound pickups and a NOS vintage paper in oil capacitor from Ukraine in the tone circuit. We used a Wilkenson bridge on this guitar for absolute tonal balance and intonation adjustability.',
       image: 'vibrawood2.jpg',
       category: categories[0]._id,
-      price: 1599.00,
+      price: 1599.99,
       quantity: 1
     },
     {
@@ -53,7 +53,7 @@ db.once('open', async () => {
       description:
         'Sunburst finish with a semi-hollow Alder body, Maple neck, Maple fingerboard, Vintage style Custom wound pickups and a NOS vintage paper in oil capacitor from Ukraine in the tone circuit. We used a Wilkenson bridge on this guitar for absolute tonal balance and intonation adjustability. Hardshell case included.',
       image: 'vibrawood3.jpg',
-      price: 1599.00,
+      price: 1599.99,
       quantity: 2
     },
     {
@@ -151,7 +151,7 @@ db.once('open', async () => {
       description:
         'This is a hand made Custom Shop instrument. Custom Color Vintage Cream Superlite Paulownia body with Maple neck and fingerboard, figured Koa inlays, lightweight Hipshot tuners, Seymour Duncan Apollo pickups and a NOS vintage paper in oil capacitor from Ukraine in the tone circuit matched to this bass guitar. Very lightweight and resonant, this bass has that low mid growl heard on stage and in the best recordings throughout the 60s, 70s and 80s!',
       image: 'vibrawoodbass11.jpg',
-      price: 1850.00,
+      price: 1850.99,
       quantity: 4
     },
     {
@@ -160,7 +160,7 @@ db.once('open', async () => {
       description:
         'This is a hand made Custom Shop instrument. Custom Color Tobacco Sunburst Superlite Paulownia body with Maple neck and fingerboard, black block inlays, lightweight Hipshot tuners, Seymour Duncan pickups and an Aguilar OBP-3 preamp allowing players to boost or cut out desired frequencies. Pickup volume is stack on the first concentric pot with Bass and Treble on the second concentric pot and Mids on the third. Very lightweight and resonant, this bass has that low mid growl heard on stage and in the best recordings throughout the 60s, 70s and 80s!',
       image: 'vibrawoodbass12.jpg',
-      price: 1750.00,
+      price: 1750.99,
       quantity: 4
     },
   ]);

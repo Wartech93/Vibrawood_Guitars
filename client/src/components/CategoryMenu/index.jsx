@@ -43,19 +43,20 @@ function CategoryMenu() {
   };
 
   return (
-    <div className="flex h-1/2 mx-20 secondaryFont">
-      
-          {categories.map((category, index) => (
-
-            <div key={index} className="flex flex-col text-center w-full items-center justify-center">
-              <img src={`/images/${category.image}`} alt={category.name} className="w-3/4 shadow-lg rounded h-2/3 object-cover mb-4" />
-              <h3 className="text-lg font-semibold text-amber-50">{category.name.toUpperCase()}</h3>
-            </div>
-
-          ))}
-      </div>
-   
-    
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-4 md:mx-10 lg:mx-20 h-auto pt-4 secondaryFont">
+      {categories.map((category, index) => (
+        <div key={index} className="flex flex-col text-center items-center justify-center p-4">
+          <img
+            src={`/images/${category.image}`}
+            alt={category.name}
+            className="w-full rounded-2xl shadow-lg h-56 md:h-64 lg:h-72 object-cover mb-4"
+          />
+          <h3 className="hover:border-b-4 text-xl md:text-2xl font-semibold text-amber-50">
+            {category.name.toUpperCase()}
+          </h3>
+        </div>
+      ))}
+    </div>
   );
 }
 
