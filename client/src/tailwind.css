@@ -5,3 +5,13 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+
+.mainFont {
+    font-family: 'Rock Salt'
+ } 
+  
+ .secondaryFont {
+    font-family: '';
+ }
+
