@@ -43,18 +43,19 @@ function CategoryMenu() {
   };
 
   return (
-    <div className="w-screen bg-gray-200 py-10">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="flex h-1/2 mx-20">
+      
           {categories.map((category, index) => (
-            <div key={index} className="bg-gray-300 p-4 rounded-lg text-center">
-              <img src={`/images/${category.image}`} alt={category.name} className="w-full h-40 object-cover mb-4" />
-              <h3 className="text-lg font-semibold">{category.name.toUpperCase()}</h3>
+
+            <div key={index} className="flex flex-col text-center w-full items-center justify-center">
+              <img src={`/images/${category.image}`} alt={category.name} className="w-3/4 shadow-lg rounded h-2/3 object-cover mb-4" />
+              <h3 className="text-lg font-semibold text-amber-50">{category.name.toUpperCase()}</h3>
             </div>
+
           ))}
-        </div>
       </div>
-    </div>
+   
+    
   );
 }
 
