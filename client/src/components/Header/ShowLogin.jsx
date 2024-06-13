@@ -23,7 +23,7 @@ function ShowLogin() {
 
       return (
         
-        <ul className="flex-row">
+        <ul className="flex py-3">
 
           <li className="mx-1">
             <Link to="/signup">Signup</Link>
