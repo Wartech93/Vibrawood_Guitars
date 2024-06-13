@@ -1,4 +1,4 @@
-import Nav from "./Nav";
+import { Link } from 'react-router-dom'
 import ShowLogin from "./ShowLogin";
 import bgImg from "../../../src/assets/guitar-play.jpg";
 
@@ -9,7 +9,27 @@ function Header() {
     
     <header className="h-1/2 bg-zinc-400 flex">
 
-        <Nav/>
+<div className="flex flex-col justify-evenly h-full w-1/5">
+
+<div className="h-1/3 flex justify-around items-center">
+    {/* <div className="bg-white h-4/5 w-1/2 border rounded-full"></div> */}
+    <img className="h-full" src="/images/logo.png"></img>
+</div>
+
+
+<ul className="flex flex-col items-center">
+   
+    <li className="mb-5"><Link to="/">HOME</Link></li>
+
+    <li className="mb-5"><Link to="/shop">SHOP</Link></li>
+
+    <li className="mb-5"><Link to="/about">ABOUT</Link></li>
+
+    <li className="mb-5"><Link to="/media">MEDIA</Link></li>
+
+</ul>
+
+</div>
 
 {/* backgroud image div */}
         <div className="w-4/5 bg-zinc-500">
