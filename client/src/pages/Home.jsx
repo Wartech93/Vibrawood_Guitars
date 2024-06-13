@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div className="bg-indigo-950 h-full">
       <CategoryMenu />
-      <Map />  
+      <div className="map w-screen">
+        <Map />
+      </div>
       <Cart />
     </div>
   );
