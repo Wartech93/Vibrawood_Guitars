@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.14",
+    "@apollo/client": "^3.7.15",
     "@stripe/stripe-js": "^1.54.0",
     "graphql": "^16.6.0",
     "happy-dom": "^9.20.3",

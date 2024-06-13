@@ -117,6 +117,7 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
+        console.log('not real')
         throw AuthenticationError;
       }
 
