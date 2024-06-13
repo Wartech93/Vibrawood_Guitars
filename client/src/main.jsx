@@ -10,7 +10,6 @@ import NoMatch from './pages/NoMatch';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Shop from './pages/Shop';
-
 const router = createBrowserRouter([
   {
     path: '/',
