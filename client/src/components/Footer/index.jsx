@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebook, FaCcStripe, FaCcMastercard, FaCcVisa, FaCcAmex
 
 const Footer = () => {
   return (
-    <div className='w-screen'>
+    <div className='w-screen secondaryFont'>
       <footer className="bg-indigo-950 text-amber-50 py-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
