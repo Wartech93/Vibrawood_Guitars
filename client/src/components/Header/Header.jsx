@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import ShowLogin from "./ShowLogin";
-import bgImg from "../../../src/assets/guitar-play.jpg";
 
 
 function Header() {
@@ -12,7 +11,6 @@ function Header() {
 <div className="flex flex-col justify-evenly h-full w-1/5">
 
 <div className="h-1/3 flex justify-around items-center">
-    {/* <div className="bg-white h-4/5 w-1/2 border rounded-full"></div> */}
     <img className="h-full" src="/images/logo.png"></img>
 </div>
 
@@ -32,7 +30,14 @@ function Header() {
 </div>
 
 {/* backgroud image div */}
-        <div className="w-4/5 bg-zinc-500">
+<div
+  className="w-4/5"
+  style={{
+    backgroundImage: `url('/images/guitar-play.jpg')`,
+    backgroundSize: 'cover', // Adjust the background image size
+    backgroundPosition: 'center -110%' // Center the background image
+  }}>
+
             <div className="h-full flex flex-col justify-start">
                 
                 <div className="flex h-1/3 justify-end mr-20">
