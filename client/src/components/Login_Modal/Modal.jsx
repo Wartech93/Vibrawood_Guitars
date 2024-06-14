@@ -72,9 +72,6 @@ function Login(props) {
                   <Checkbox id="remember" />
                   <Label htmlFor="remember">Remember me</Label>
                 </div>
-                <a href="#" className="text-sm text-cyan-700 hover:underline dark:text-cyan-500">
-                  Lost Password?
-                </a>
               </div>
               <div className="w-full">
                 <button type="submit">Log in</button>
@@ -82,9 +79,9 @@ function Login(props) {
               <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered?&nbsp;
                 <Link to="/signup">
-                  <a onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
+                  <Button onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
                     Create account
-                  </a>
+                  </Button>
                 </Link>
               </div>
             </div>
