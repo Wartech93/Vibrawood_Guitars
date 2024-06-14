@@ -8,6 +8,7 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
+import { Button } from 'flowbite-react';
 
 
 
@@ -83,7 +84,7 @@ const Cart = () => {
 
             {Auth.loggedIn() ? (
               
-              <button onClick={submitCheckout}>Checkout</button>
+              <Button onClick={submitCheckout}>Checkout</Button>
              
             ) : (
               <span>(log in to check out)</span>
