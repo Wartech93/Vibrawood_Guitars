@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
 import Auth from '../../utils/auth';
+import { Link } from "react-router-dom";
 
 
 function Login(props) {
@@ -77,9 +78,11 @@ function Login(props) {
               </div>
               <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered?&nbsp;
-                <a href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
-                  Create account
-                </a>
+                <Link to="/signup">
+                  <a onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
+                    Create account
+                  </a>
+                </Link>
               </div>
             </div>
           </form>
