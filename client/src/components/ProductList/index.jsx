@@ -6,6 +6,9 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+
+
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -13,6 +16,8 @@ function ProductList() {
   const { currentCategory } = state;
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
+
+ 
 
   useEffect(() => {
     if (data) {
@@ -50,8 +55,9 @@ function ProductList() {
             {filterProducts().map((product) => (
               <div 
                 key={product._id}
+                _id={product._id}
                 className="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
+                <a href={`/products/${product._id}`}>
                   <img 
                     className="p-8 rounded-t-lg" 
                     src={`/images/${product.image}`}
@@ -67,11 +73,6 @@ function ProductList() {
                   </a>
                   <div className="flex items-center justify-between mt-2.5 mb-5">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
-                    <a 
-                      href="#" 
-                      className="text-white bg-indigo-950 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      Add to cart
-                    </a>
                   </div>
                 </div>
               </div>
