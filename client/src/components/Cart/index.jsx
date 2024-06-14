@@ -10,6 +10,8 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
 
+
+
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
@@ -58,7 +60,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
+        <span className='text-amber-50' role="img" aria-label="trash"><img src="/images/cart.svg"></img>
         </span>
       </div>
     );
