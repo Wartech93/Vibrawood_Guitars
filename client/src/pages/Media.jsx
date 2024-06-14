@@ -1,8 +1,11 @@
+import Social from "../components/Media/Social";
+
+
 
 const Media = () => {
   return (
-    <div className="">
-      
+    <div className='container secondaryFontsocial'>
+      <Social />
     </div>
   );
 };

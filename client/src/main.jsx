@@ -11,6 +11,7 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Shop from './pages/Shop';
 import About from './pages/About.jsx';
+import Media from './pages/Media.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       }, {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/media',
+        element: <Media />
       }
     ]
   }
