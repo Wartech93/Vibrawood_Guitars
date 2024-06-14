@@ -1,29 +1,46 @@
 const About = () => {
     return (
-        <div className="flex flex-col w-fit items-center text-center secondaryFontlite">
-            <div className="m-4 flex w-11/12 justify-center content-center h-80 gap-20">
-                <p className="w-1/3 flex justify-center items-center bg-gray-400 rounded">Our Story</p>
-                <p className="w-fit flex justify-center items-center bg-gray-500 p-5 rounded" >Welcome to VibraWood Custom Instruments, available at Guitar Villa in Bethlehem, PA. Known for expert setup and modification, we use top-quality materials overlooked by large manufacturers. After years of prototyping, we launched VibraWood guitars and basses.
-                </p>
-            </div>
-            <div className="m-4 flex w-11/12 justify-center content-center h-80 gap-20">
-                <p className="w-fit flex justify-center items-center bg-gray-500 p-5">Our instruments use precision cutting and shaping, with nitro-cellulose lacquer for superior tone. VibraWood offers alternatives to vintage Fender instruments from the 50s-70s, starting at $1650.
-                    We select the best wood for custom builds, using resonant hardwoods for visually and sonically appealing instruments. Our instruments resonate acoustically before being plugged in, ensuring lightweight and high resonance.
+        <div className="flex flex-col h-full py-20 px-40 bg-indigo-950 secondaryFont">
 
+            <div className= "flex mb-10 justify-between">
+                <p className="w-1/4 flex justify-center items-center bg-amber-50 text-yellow-500 rounded text-4xl">Our Story</p>
+                <p className="w-2/3 flex justify-center items-center text-amber-50 text-lg rounded" >About VibraWood Custom Instruments
+                    Welcome to the VibraWood classic series of hand built Custom Shop instruments, distributed exclusively at Guitar Villa – Bethlehem PA.
+                    Over the course of many years, we grew famous for our expert set-up and modification work and became the go-to custom shop where many working musicians trusted us to improve their existing instruments.  Whether it was electronic modifications or repairs, set-up neck and bridge work, fret leveling and replacement or just plain adjustments to optimum playability, we did the job!
                 </p>
-                <img src="/images/John.jpg" alt="" className="w-1/3 flex justify-center items-center bg-gray-400" />
             </div>
-            <div className="m-4 flex w-11/12 justify-center content-center h-80 gap-20">
-                <img className="w-1/3 flex justify-center items-center bg-gray-400" src="" alt="" />
-                <p className="w-fit flex justify-center items-center bg-gray-500 p-5">Affordable custom classics start at $1650, with options for pickups, electronics, wood species, and finishes. We offer decades of expertise for your desired tone and feel, including exotic wood and electronic options. Visit Guitar Villa to try our custom-built instruments.
+
+            <div className= "flex my-10 justify-between">
+                <p className="w-2/3 flex justify-center items-center text-amber-50 text-lg rounded" >About VibraWood Custom Instruments
+                    Welcome to the VibraWood classic series of hand built Custom Shop instruments, distributed exclusively at Guitar Villa – Bethlehem PA.
+                    Over the course of many years, we grew famous for our expert set-up and modification work and became the go-to custom shop where many working musicians trusted us to improve their existing instruments.  Whether it was electronic modifications or repairs, set-up neck and bridge work, fret leveling and replacement or just plain adjustments to optimum playability, we did the job!
+                </p>
+                <div className="w-1/4 flex justify-center items-center rounded">
+                    <img src="/images/vibrawood2.jpg" alt=""/>
+                </div>
+            </div>
+
+            <div className= "flex my-10 justify-between">
+                <p className="w-1/4 flex justify-center items-center bg-amber-50 text-yellow-500 rounded text-4xl">Our Story</p>
+                <p className="w-2/3 flex justify-center items-center text-amber-50 text-lg rounded" >When we finally decided to take the step to redesign, tweak and take an old school approach to building these classic styled guitars and basses, of course we chose the best possible materials and made sure the accuracy of the cutting and shaping process is of the highest quality. The best instruments ever produced have been finished with real nitro-cellulose lacquer and that’s what we use on our highest build level instruments. It takes longer to finish but the tone achieved and the progressive quality of sound over the years of ownership is worth every step and the build expense we incur in the production schedule.
                 </p>
             </div>
-            <div>
-                <p className="m-20 p-10 border-t-8 text-3xl border-black">
+
+            <div className= "flex my-10 justify-between">
+                <p className="w-2/3 flex justify-center items-center text-amber-50 text-lg rounded">The base line of Vibrawood Custom Instruments, come together as an alternative to a vintage Fender instrument from the 50’s, 60’s or 70’s – the undeniable BEST era in Fender history. The original vintage Fenders from that era now are worth anywhere from $7,000. To 25,000. and the thought of risking loss or damage to them on stage or in the studio is insurmountable. We have created instruments in their image that play great, sound amazing and look incredibly beautiful. These Custom Shop instruments start at just $1650. and are replaceable in the event of a catastrophic loss.
+                </p>
+                <div className="w-1/4 flex justify-center items-center rounded">
+                    <img src="/images/vibrawood2.jpg" alt=""/>
+                </div>
+            </div>
+
+            <hr></hr>
+           
+                <p className="my-10 p-10 text-3xl text-amber-50">
                     VibraWood Custom instrument builds - where QUALITY sings with every note.
                 </p>
             </div>
-        </div>
+       
     );
 };
 
