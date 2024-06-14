@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 
 function Login(props) {
@@ -11,6 +12,8 @@ function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, { error }] = useMutation(LOGIN);
+
+  const linkClass =  'bg-indigo-950 text-white hover:bg-gray-900 hover:text-white px-3 py-2 text-white rounded-md'
 
 
   const handleFormSubmit = async (event) => {
@@ -34,7 +37,7 @@ function Login(props) {
 
   return (
     <>
-      <Button className='w-14 text-white border-2 border-white-300' onClick={() => setOpenModal(true)}>Login</Button>
+      <NavLink className={linkClass} onClick={() => setOpenModal(true)}>Login</NavLink>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body >
@@ -69,9 +72,6 @@ function Login(props) {
                   <Checkbox id="remember" />
                   <Label htmlFor="remember">Remember me</Label>
                 </div>
-                <a href="#" className="text-sm text-cyan-700 hover:underline dark:text-cyan-500">
-                  Lost Password?
-                </a>
               </div>
               <div className="w-full">
                 <button type="submit">Log in</button>
@@ -79,9 +79,9 @@ function Login(props) {
               <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered?&nbsp;
                 <Link to="/signup">
-                  <a onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
+                  <Button onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
                     Create account
-                  </a>
+                  </Button>
                 </Link>
               </div>
             </div>

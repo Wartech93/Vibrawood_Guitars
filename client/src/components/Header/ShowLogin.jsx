@@ -1,9 +1,8 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import React, { useState } from 'react';
-import Login from '../Login_Modal/Modal'
-import {Button} from "flowbite-react";
-
+import Login from '../Login_Modal/Modal';
+import Signup from '../SignUpModal/Signup';
+import { Button } from 'flowbite-react';
 function ShowLogin() {
 
 
@@ -11,14 +10,18 @@ function ShowLogin() {
 
     return (
 
-      <ul className="flex-row">
+      <ul className="flex-row gap-4 mt-4">
 
         <li className="mx-1">
-          <Link to="/orderHistory">Order History</Link>
+          
+          <Link to="/orderHistory">
+          <Button className='w-14 text-white border-2 border-white-300'>Order History</Button></Link>
         </li>
 
-        <li className="mx-1">
+        <li className="mx-1 mt-4">
+          <Button className='w-14 text-white border-2 border-white-300'>
           <a href="/" onClick={() => Auth.logout()}>Logout</a>
+          </Button>
         </li>
       </ul>
     );
@@ -29,16 +32,11 @@ function ShowLogin() {
 
       <ul className="flex flex-row gap-4 mt-4">
         <li className="mx-1">
-          <Link to="/signup">
-          <Button className='w-14 text-white border-2 border-white-300'>
-          Signup
-          </Button>
-          </Link>
+          <Signup />          
         </li>
         <li>        
            <Login />
         </li>
-
       </ul>
     );
   }
