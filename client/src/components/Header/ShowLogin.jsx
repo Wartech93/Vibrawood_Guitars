@@ -39,11 +39,9 @@ function ShowLogin() {
 
       <ul className="flex flex-row gap-4 mt-4">
         <li className="mx-1">
-          <Link to="/signup">
-            <NavLink className={linkClass}>
+            <NavLink to="/signup" className={linkClass}>
               Signup
             </NavLink>
-          </Link>
         </li>
         <li>
           <Login />
