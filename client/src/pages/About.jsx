@@ -36,7 +36,7 @@ const About = () => {
 
             <hr></hr>
            
-                <p className="my-10 p-10 text-3xl text-amber-50">
+                <p className="my-10 p-10 text-3xl text-center text-amber-50">
                     VibraWood Custom instrument builds - where QUALITY sings with every note.
                 </p>
             </div>

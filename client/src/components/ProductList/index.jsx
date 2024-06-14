@@ -71,7 +71,7 @@ function ProductList() {
                       {product.name}
                     </h5>
                   </a>
-                  <div className="flex items-center justify-between mt-2.5 mb-5">
+                  <div className="flex items-center justify-center mt-2.5 mb-5">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
                   </div>
                 </div>

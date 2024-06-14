@@ -17,7 +17,7 @@ function Header() {
                 </div>
 
 
-                <ul className="flex flex-col items-start pr-4 secondaryFont w-24">
+                <ul className="flex flex-col items-start secondaryFont w-24 gap-5">
 
                     <li><NavLink to="/" className={linkClass}>HOME</NavLink></li>
 
