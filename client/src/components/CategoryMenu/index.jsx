@@ -44,7 +44,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-4 md:mx-10 lg:mx-20 h-auto pt-4 secondaryFont">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-4 md:mx-10 lg:mx-20 h-auto pt-4 secondaryFont">
       {categories.map((category, index) => (
         <Link key={index} to='/shop' onClick={()=> handleClick(category.name)} className="hover:underline font-semibold text-amber-50 flex flex-col text-center items-center justify-center p-4">
           <img

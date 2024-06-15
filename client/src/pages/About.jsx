@@ -1,5 +1,9 @@
+import Cart from "../components/Cart";
+
 const About = () => {
     return (
+        <>
+        <Cart/>
         <div className="flex flex-col h-full py-20 px-40 bg-indigo-950 secondaryFont">
 
             <div className= "flex mb-10 justify-between">
@@ -40,7 +44,7 @@ const About = () => {
                     VibraWood Custom instrument builds - where QUALITY sings with every note.
                 </p>
             </div>
-       
+         </>
     );
 };
 

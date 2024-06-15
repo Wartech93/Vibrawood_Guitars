@@ -13,7 +13,6 @@ function Login(props) {
   const [password, setPassword] = useState('');
   const [login, { error }] = useMutation(LOGIN);
 
-  const linkClass =  'bg-indigo-950 text-white hover:bg-gray-900 hover:text-white px-3 py-2 text-white rounded-md'
 
 
   const handleFormSubmit = async (event) => {
@@ -37,7 +36,7 @@ function Login(props) {
 
   return (
     <>
-      <NavLink className={linkClass} onClick={() => setOpenModal(true)}>Login</NavLink>
+      <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500' onClick={() => setOpenModal(true)}>Login</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body >
