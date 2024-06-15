@@ -42,7 +42,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className=''
+                                    className='hover:bg-gray-400'
                                     onClick={() => [handleClick(''), setDisplay('All')]}
                                 >
                                     All
@@ -51,7 +51,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className=''
+                                    className='hover:bg-gray-400'
                                     onClick={() => [handleClick('Guitar'), setDisplay('Guitars')]}
                                 >
                                     Guitars
@@ -61,7 +61,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className=''
+                                    className='hover:bg-gray-400'
                                     onClick={() => [handleClick('Bass'), setDisplay('Bases')]}
                                 >
                                     Basses
@@ -70,7 +70,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className=''
+                                    className='hover:bg-gray-400'
                                     onClick={() => [handleClick('Sale'), setDisplay('On Sale')]}
                                 >
                                     On Sale
