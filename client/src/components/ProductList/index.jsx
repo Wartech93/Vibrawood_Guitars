@@ -10,10 +10,12 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 
 
 
+
 function ProductList() {
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
+  console.log(currentCategory)
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -44,7 +46,7 @@ function ProductList() {
     }
 
     return state.products.filter(
-      (product) => product.category._id === currentCategory
+      (product) => product.cat === currentCategory
     );
   }
 

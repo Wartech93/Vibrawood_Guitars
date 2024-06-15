@@ -13,6 +13,7 @@ const typeDefs = `
     quantity: Int
     price: Float
     category: Category
+    cat: String
   }
 
   type Order {
