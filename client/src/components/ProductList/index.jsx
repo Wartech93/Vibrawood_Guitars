@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+
 
 
 
@@ -19,7 +19,7 @@ function ProductList() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
- 
+
 
   useEffect(() => {
     if (data) {
@@ -53,33 +53,37 @@ function ProductList() {
   return (
     <div className="my-5 w-screen mx-auto px-24">
       {state.products.length ? (
-          <div className="place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 sm:gap-x-4 lg:gap-x-6">
-            {filterProducts().map((product) => (
-              <div 
+        <div className="place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 sm:gap-x-4 lg:gap-x-6">
+          {filterProducts().map((product) => (
+            <a href={`/products/${product._id}`}>
+              <div
                 key={product._id}
                 _id={product._id}
                 className="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href={`/products/${product._id}`}>
-                  <img 
-                    className="p-8 rounded-t-lg" 
-                    src={`/images/${product.image}`}
-                    alt={product.name} 
-                  />
-                </a>
+
+                <img
+                  className="p-8 rounded-t-lg"
+                  src={`/images/${product.image}`}
+                  alt={product.name}
+                />
+
                 <div className="px-5 pb-5 text-center">
-                  <a href="#">
-                    <h5 
-                      className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                      {product.name}
-                    </h5>
-                  </a>
+
+                  <h5
+                    className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                    {product.name}
+                  </h5>
+
                   <div className="flex items-center justify-center mt-2.5 mb-5">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
                   </div>
+
                 </div>
+
               </div>
-            ))}
-          </div>
+            </a>
+          ))}
+        </div>
       ) : (
         <h3>You haven't added any products yet!</h3>
       )}

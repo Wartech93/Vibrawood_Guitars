@@ -95,36 +95,33 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <div className="container secondaryFontlite mx-auto p-4">
+          <Link to="/shop" className="block mb-4 text-blue-500 hover:underline">← Back to Products</Link>
 
-          <h2>{currentProduct.name}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:gid-cols-2 gap-6">
+            <div className="left-container bg-white shadow-lg rounded-lg p-6">
+              <img
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+                className="w-full rounded-lg"
+              />
+            </div>
 
-
-         
-
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-
-          /> 
-          
-          <p>{currentProduct.description}</p>
+            <div className="right-container bg-white shadow-lg rounded-lg p-6">
+              <h2 className="text-3xl font-semibold mb-4">{currentProduct.name}</h2>
+              <p className="text-2xl font-medium text-gray-700 mb-4">${currentProduct.price}</p>
+              <button 
+                onClick={addToCart}
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition mb-4"
+              >
+                Add to Cart
+              </button>
+              <p className="text-gray-600">{currentProduct.description}</p>
+            </div>
+          </div>
         </div>
       ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+      {loading ? <img src={spinner} alt="loading" className="mx-auto mt-4" /> : null}
       <Cart />
     </>
   );
