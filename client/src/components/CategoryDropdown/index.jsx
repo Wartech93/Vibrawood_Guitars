@@ -8,7 +8,7 @@ import { useState } from 'react'
 const CategoryDropdown = () => {
     const [state, dispatch] = useStoreContext();
 
-    const [display, setDisplay] = useState('Categories')
+    const [display, setDisplay] = useState(state.currentCategory)
 
     const handleClick = (category) => {
         dispatch({
