@@ -55,22 +55,19 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       // We map through the list of products sent by the client to extract the _id of each item and create a new Order.
       await Order.create({ products: args.products.map(({ _id }) => _id) });
-      const line_items = [];
 
-      for (const product of args.products) {
-        line_items.push({
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: product.name,
-              description: product.description,
-              images: [`${url}/images/${product.image}`],
-            },
-            unit_amount: product.price * 100,
+      const line_items = args.products.map(product => ({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: product.name,
+            description: product.description,
+            images: [`${url}/images/${product.image}`],
           },
-          quantity: product.purchaseQuantity,
-        });
-      }
+          unit_amount: product.price * 100,
+        },
+        quantity: product.purchaseQuantity,
+      }));
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
