@@ -56,31 +56,27 @@ function ProductList() {
   
 
   return (
-    <div className="my-5 w-screen mx-auto px-24">
+    <div className="w-screen mx-auto px-24 py-10">
       {state.products.length ? (
-        <div className="place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 sm:gap-x-4 lg:gap-x-6">
+        <div className="h-full grid sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 lg:gap-x-6">
           {filterProducts().map((product) => (
-            <a href={`/products/${product._id}`} key={product._id}>
+            <a href={`/products/${product._id}`} key={product._id} className="w-full">
               <div
                 _id={product._id}
-                className="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                className="flex flex-col justify-between w-full h-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"> {/* Set consistent card height */}
                 <img
-                  className="p-8 rounded-t-lg"
+                  className="p-4 w-full h-70 object-cover rounded-t-lg"
                   src={`/images/${product.image}`}
                   alt={product.name}
                 />
-                <div className="px-5 pb-5 text-center">
-                  <h5
-                    className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                <div className="px-5 pb-5 flex-grow text-center flex flex-col justify-between">
+                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-2.5">
                     {product.name}
                   </h5>
-
-                  <div className="flex items-center justify-center mt-2.5 mb-5">
+                  <div className="flex items-center justify-center mt-2.5 mb-2.5">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
                   </div>
-
                 </div>
-
               </div>
             </a>
           ))}
@@ -91,6 +87,10 @@ function ProductList() {
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
   );
+  
+  
+  
 }
+  
 
 export default ProductList;

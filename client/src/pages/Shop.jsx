@@ -4,7 +4,7 @@ import CategoryDropdown from "../components/CategoryDropdown";
 
 const Home = () => {
   return (
-    <div className="container w-screen">
+    <div>
       <Cart />
       <CategoryDropdown />
       <ProductList />
