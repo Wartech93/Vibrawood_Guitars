@@ -58,7 +58,7 @@ function ProductList() {
   return (
     <div className="w-screen mx-auto px-24 py-10">
       {state.products.length ? (
-        <div className="h-full grid lg:grid-cols-4 gap-y-4 lg:gap-x-6">
+        <div className="h-full grid sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 lg:gap-x-6">
           {filterProducts().map((product) => (
             <a href={`/products/${product._id}`} key={product._id} className="w-full">
               <div

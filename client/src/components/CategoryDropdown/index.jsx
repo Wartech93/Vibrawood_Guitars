@@ -20,7 +20,7 @@ const CategoryDropdown = () => {
     const linkClass = 'cursor-pointer text-indigo-950 hover:text-yellow-500'
 
     return (
-        <div className='flex w-screen justify-center m-5'>
+        <div className='flex justify-center m-5'>
             <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
