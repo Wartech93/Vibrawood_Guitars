@@ -14,18 +14,17 @@ function ShowLogin() {
 
       <div className="flex justify-center items-start gap-5 ">
 
-        <a className="mx-1 mt-4">
-          <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500'>
-            <a href="/" onClick={() => Auth.logout()}>Logout</a>
+        <div className="mx-1 mt-4">
+          <Button href="/" onClick={() => Auth.logout()} className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500'>
+            Logout
           </Button>
-        </a>
+        </div>
 
-        <a className="mx-1 mt-6 text-white">
-
+        <div className="mx-1 mt-6 text-white">
           <Link to="/orderHistory">
             <FaUser size={24} />
           </Link>
-        </a>
+        </div>
 
 
       </div>
