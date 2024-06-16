@@ -1,6 +1,7 @@
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { FaShoppingCart, FaTrash } from "react-icons/fa";
 
 const CartItem = ({ item }) => {
 
@@ -36,29 +37,29 @@ const CartItem = ({ item }) => {
   }
 
   return (
-    <div className="flex-row">
-      <div>
-        <img
-          src={`/images/${item.image}`}
-          alt=""
-        />
-      </div>
-      <div>
-        <div>{item.name}, ${item.price}</div>
-        <div>
-          <span>Qty:</span>
+    <div className="flex items-center justify-between p-4 bg-white border rounded-lg shadow-sm mb-4">
+      <img
+        src={`/images/${item.image}`}
+        alt={item.name}
+        className="w-20 h-20 object-contain rounded-lg"
+      />
+      <div className="flex-1 ml-4">
+        <div className="text-lg font-semibold text-gray-900">{item.name}</div>
+        <div className="text-lg font-bold text-gray-700">${item.price}</div>
+        <div className="flex items-center mt-2">
+          <span className="mr-2">Qty:</span>
           <input
             type="number"
-            placeholder="1"
+            min="1"
             value={item.purchaseQuantity}
             onChange={onChange}
+            className="w-16 h-10 text-center border rounded bg-white shadow-sm"
           />
           <span
-            role="img"
-            aria-label="trash"
             onClick={() => removeFromCart(item)}
+            className="text-red-500 hover:text-red-700 cursor-pointer ml-4"
           >
-            🗑️
+            <FaTrash size={18} />
           </span>
         </div>
       </div>

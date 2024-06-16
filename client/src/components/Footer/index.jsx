@@ -1,5 +1,5 @@
 import { FaInstagram, FaFacebook, FaCcStripe, FaCcMastercard, FaCcVisa, FaCcAmex, FaCcDiscover, FaCcJcb } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="w-full h-auto bg-indigo-950 text-amber-50 py-8">
@@ -27,25 +27,25 @@ const Footer = () => {
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold">Quick Links</h2>
           <ul className="mt-2 space-y-2 text-base md:text-lg lg:text-xl">
             <li>
-              <a href="#" className="hover:text-gray-400">Shop Guitars</a>
+              <Link to='/shop' className="hover:text-gray-400">Shop Guitars</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">About Us</a>
+              <Link to='/about' className="hover:text-gray-400">About Us</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">Repairs</a>
+              <Link  className="hover:text-gray-400">Repairs</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">Product Support</a>
+              <Link  className="hover:text-gray-400">Product Support</Link>
             </li>
           </ul>
           <div className="flex justify-center md:justify-end mt-4 space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <Link to='/media' className="text-gray-400 hover:text-white">
               <FaInstagram size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link to='/media' className="text-gray-400 hover:text-white">
               <FaFacebook size={24} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
