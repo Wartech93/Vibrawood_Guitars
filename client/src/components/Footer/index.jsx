@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col items-center mb-4 md:mb-0">
-          <h2 className="text-lg md:text-xl lg:text-2xl font-bold">VibraWood Guitars LLC.</h2>
+          <h2 className="text-lg md:text-xl lg:text-2xl font-bold">Vibrawood Guitars LLC &copy;</h2>
           <div className="rounded-full h-24 w-24 md:h-32 md:w-32 lg:h-48 lg:w-48 flex items-center justify-center mt-2">
             <img src="/images/logo.png" alt="logo" className="h-full w-full object-cover" />
           </div>
