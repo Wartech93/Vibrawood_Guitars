@@ -45,6 +45,10 @@ function ProductList() {
       return state.products;
     }
 
+    if(currentCategory === 'View All'){
+      return state.products;
+    }
+
     return state.products.filter(
       (product) => product.cat === currentCategory
     );

@@ -62,7 +62,7 @@ const CategoryDropdown = () => {
                                 <a
                                     href="#"
                                     className='hover:bg-gray-400'
-                                    onClick={() => [handleClick('Bass'), setDisplay('Bases')]}
+                                    onClick={() => [handleClick('Bass'), setDisplay('Basses')]}
                                 >
                                     Basses
                                 </a>
@@ -85,10 +85,3 @@ const CategoryDropdown = () => {
 }
 
 export default CategoryDropdown
-
-// <div className='flex justify-evenly m-5 text-lg font-bold text-indigo-950 '>
-//     <p onClick={()=> handleClick('')} className={linkClass}>All</p>
-//     <p onClick={()=> handleClick('Guitar')} className={linkClass}>Guitars</p>
-//     <p onClick={()=> handleClick('Bass')} className={linkClass}>Basses</p>
-//     <p onClick={()=> handleClick('Sale')} className={linkClass}>On Sale</p>
-// </div>
