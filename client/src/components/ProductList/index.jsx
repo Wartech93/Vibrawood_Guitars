@@ -53,26 +53,23 @@ function ProductList() {
       (product) => product.cat === currentCategory
     );
   }
+  
 
   return (
     <div className="my-5 w-screen mx-auto px-24">
       {state.products.length ? (
         <div className="place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 sm:gap-x-4 lg:gap-x-6">
           {filterProducts().map((product) => (
-            <a href={`/products/${product._id}`}>
+            <a href={`/products/${product._id}`} key={product._id}>
               <div
-                key={product._id}
                 _id={product._id}
                 className="w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-
                 <img
                   className="p-8 rounded-t-lg"
                   src={`/images/${product.image}`}
                   alt={product.name}
                 />
-
                 <div className="px-5 pb-5 text-center">
-
                   <h5
                     className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                     {product.name}

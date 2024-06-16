@@ -10,19 +10,22 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import { Button } from 'flowbite-react';
 import { FaShoppingCart } from 'react-icons/fa';
 
-
-
-
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51PQbXaP9RsAu0TmjdpZfDJoaOZEcojs1AALCJ4RGCQujmt55e1mobc98hwS3UhQnxvQqiA92NCflx3LlJushkl4E00ByJSKKDb');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
-  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  const [getCheckout, { data, loading, error }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
     if (data) {
+      console.log('Checkout session data:', data);
       stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
+        res.redirectToCheckout({ sessionId: data.checkout.session })
+          .then((result) => {
+            if (result.error) {
+              console.error('Stripe redirect error:', result.error.message);
+            }
+          });
       });
     }
   }, [data]);
@@ -69,47 +72,48 @@ const Cart = () => {
   }
 
   return (
-      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-center items-center">
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Shopping Cart</h2>
-            <button 
-              className="text-gray-500 hover:text-gray-700"
-              onClick={toggleCart}
-            >
-              [close]
-            </button>
-          </div>
-          
-          {state.cart.length ? (
-            <div>
-              {state.cart.map((item) => (
-                <CartItem key={item._id} item={item} />
-              ))}
-  
-              <div className="flex justify-between items-center mt-6 pt-6 border-t">
-                <strong className="text-lg">Total: ${calculateTotal()}</strong>
-  
-                {Auth.loggedIn() ? (
-                  <Button onClick={submitCheckout} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    Checkout
-                  </Button>
-                ) : (
-                  <span className="text-red-500">(log in to check out)</span>
-                )}
-              </div>
-            </div>
-          ) : (
-            <h3 className="text-center mt-6">
-              <span role="img" aria-label="shocked">
-                😱
-              </span>
-              You haven't added anything to your cart yet!
-            </h3>
-          )}
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-center items-center">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-bold">Shopping Cart</h2>
+          <button 
+            className="text-gray-500 hover:text-gray-700"
+            onClick={toggleCart}
+          >
+            [close]
+          </button>
         </div>
+        
+        {state.cart.length ? (
+          <div>
+            {state.cart.map((item) => (
+              <CartItem key={item._id} item={item} />
+            ))}
+
+            <div className="flex justify-between items-center mt-6 pt-6 border-t">
+              <strong className="text-lg">Total: ${calculateTotal()}</strong>
+
+              {Auth.loggedIn() ? (
+                <Button onClick={submitCheckout} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                  Checkout
+                </Button>
+              ) : (
+                <span className="text-red-500">(log in to check out)</span>
+              )}
+            </div>
+          </div>
+        ) : (
+          <h3 className="text-center mt-6">
+            <span role="img" aria-label="shocked">
+              😱
+            </span>
+            You haven't added anything to your cart yet!
+          </h3>
+        )}
       </div>
-    );
+    </div>
+  );
 };
 
 export default Cart;
+
