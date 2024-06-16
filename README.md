@@ -23,7 +23,7 @@
   <h3 align="center">Vibrawood_Guitars</h3>
 
   <p align="center">
-    Brought to you Christian Abbat, Anthony Muscarella, Breeanna Nouskaijian and Royce Atkins<br />
+    Brought to you Christian Abbate, Anthony Muscarella, Breeanna Nouskhaijian and Royce Atkins<br />
     <a href="https://github.com/Wartech93/Vibrawood_Guitars"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -176,7 +176,7 @@ See LICENSE.txt for more information.
 [Anthony Muscarella](https://github.com/muscarellaanthony)
 
 
-[Breeanna Nouskaijian](https://github.com/BreeNous)
+[Breeanna Nouskhaijian](https://github.com/BreeNous)
 
 Project Links:
 
