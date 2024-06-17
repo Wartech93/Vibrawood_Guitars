@@ -13,7 +13,8 @@ function Login(props) {
   const [password, setPassword] = useState('');
   const [login, { error }] = useMutation(LOGIN);
 
-
+  const [loginFailed, setLoginFailed] = useState(false);
+  
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -26,6 +27,7 @@ function Login(props) {
       Auth.login(token);
       onCloseModal();
     } catch (e) {
+      setLoginFailed(true);
       console.log('error', e);
     }
   };
@@ -43,6 +45,7 @@ function Login(props) {
           <form onSubmit={handleFormSubmit}>
             <div className="space-y-4 p-4">
               <h3 className="text-xl font-medium text-gray-900 dark:text-white">Login</h3>
+              {loginFailed ? (<p className='text-red-500'>Please enter correct login information.</p>) : null}
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="email" value="Your email" />
@@ -78,9 +81,9 @@ function Login(props) {
               <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered?&nbsp;
                 <Link to="/signup">
-                  <Button onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
+                  <button onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
                     Create account
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>
