@@ -52,7 +52,7 @@ function Header() {
 
                             <h1 className="text-6xl mb-2 text-amber-50 mainFont">Vibrawood</h1>
                             <p className="mb-5 text-amber-50 pl-8 secondaryFont">ONE OF A KIND GUITARS</p>
-                            <Link to="/shop" className="text-center bg-amber-50 secondaryFont text-indigo-950 h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
+                            <Link to="/shop" className="text-center bg-amber-50 secondaryFont h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
                                     SHOP
                             </Link>
 
