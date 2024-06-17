@@ -13,12 +13,12 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+      <div className="w-screen h-[50vh] my-2">
+      <Link to="/shop" className="block mb-4 text-blue-500 hover:underline">← Back to Products</Link>
 
         {user ? (
           <>
-            <h2>
+            <h2 className='pl-30 text-amber-50 underline text-center text-2xl secondaryFontCustom'>
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (

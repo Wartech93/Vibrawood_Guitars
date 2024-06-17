@@ -56,7 +56,7 @@ function ProductList() {
   
 
   return (
-    <div className="w-screen mx-auto px-24 pb-10 bg-amber-300">
+    <div className="w-screen mx-auto px-24 pb-10 bg-yellow-950">
       {state.products.length ? (
         <div className="h-full grid sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-4 lg:gap-x-6">
           {filterProducts().map((product) => (
