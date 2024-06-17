@@ -9,7 +9,6 @@ const Home = () => {
       <div className="map w-screen">
         <Map />
       </div>
-      <Cart />
     </div>
   );
 };

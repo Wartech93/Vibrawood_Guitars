@@ -122,7 +122,6 @@ function Detail() {
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" className="mx-auto mt-4" /> : null}
-      <Cart />
     </>
   );
 }

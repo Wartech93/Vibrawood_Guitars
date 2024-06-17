@@ -63,9 +63,9 @@ const Cart = () => {
 
   if (!state.cartOpen) {
     return (
-      <div className="absolute top-0 right-1 m-4 p-2 cursor-pointer z-10" onClick={toggleCart}>
+      <div className="m-4 p-1 cursor-pointer z-10" onClick={toggleCart}>
         <span className="text-white transition-colors duration-300 hover:text-yellow-500">
-          <FaShoppingCart size={24}/>
+          <FaShoppingCart size={30}/>
         </span>
       </div>
     );
