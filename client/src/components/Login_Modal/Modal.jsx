@@ -36,7 +36,7 @@ function Login(props) {
 
   return (
     <>
-      <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500' onClick={() => setOpenModal(true)}>Login</Button>
+      <Button className='w-13 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500' onClick={() => setOpenModal(true)}>Login</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
         <Modal.Header />
         <Modal.Body >

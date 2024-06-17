@@ -25,25 +25,25 @@ const Footer = () => {
         </div>
         <div className="flex-1 text-center md:text-right">
           <h2 className="text-lg md:text-xl lg:text-2xl font-bold">Quick Links</h2>
-          <ul className="mt-2 space-y-2 text-base md:text-lg lg:text-xl">
+          <ul className="mt-2 space-y-2 text-base md:text-lg lg:text-xl text-amber-50">
             <li>
-              <Link to='/shop' className="hover:text-gray-400">Shop Guitars</Link>
+              <Link to='/shop' className="hover:text-yellow-500">Shop Guitars</Link>
             </li>
             <li>
-              <Link to='/about' className="hover:text-gray-400">About Us</Link>
+              <Link to='/about' className="hover:text-yellow-500">About Us</Link>
             </li>
             <li>
-              <Link  className="hover:text-gray-400">Repairs</Link>
+              <Link  className="hover:text-yellow-500">Repairs</Link>
             </li>
             <li>
-              <Link  className="hover:text-gray-400">Product Support</Link>
+              <Link  className="hover:text-yellow-500">Product Support</Link>
             </li>
           </ul>
           <div className="flex justify-center md:justify-end mt-4 space-x-4">
-            <Link to='/media' className="text-gray-400 hover:text-white">
+            <Link to='/media' className="text-amber-50 hover:text-yellow-500">
               <FaInstagram size={24} />
             </Link>
-            <Link to='/media' className="text-gray-400 hover:text-white">
+            <Link to='/media' className="text-amber-50 hover:text-yellow-500">
               <FaFacebook size={24} />
             </Link>
           </div>
