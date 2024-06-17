@@ -20,12 +20,13 @@ const CategoryDropdown = () => {
     const linkClass = 'cursor-pointer text-indigo-950 hover:text-yellow-500'
 
     return (
-        <div className='flex w-screen justify-center m-5'>
+        <div className='flex justify-center py-10 bg-amber-300'>
             <Menu as="div" className="relative inline-block text-left">
-                <div>
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                <div className='flex items-center'>
+                <p className='mr-2 text-amber-50 secondaryFontCustom'>Filter</p>
+                    <MenuButton className="inline-flex w-full justify-center rounded-md bg-amber-50 px-2 text-sm font-semibold text-indigo-950 hover:bg-indigo-950 hover:text-amber-50">
                         {display}
-                        <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <p>▾</p>
                     </MenuButton>
                 </div>
 
@@ -42,7 +43,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className='hover:bg-gray-400'
+                                    className='pl-2 hover:bg-yellow-500 text-indigo-900'
                                     onClick={() => [handleClick(''), setDisplay('All')]}
                                 >
                                     All
@@ -51,7 +52,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className='hover:bg-gray-400'
+                                    className='pl-2 hover:bg-yellow-500 text-indigo-900'
                                     onClick={() => [handleClick('Guitar'), setDisplay('Guitars')]}
                                 >
                                     Guitars
@@ -61,7 +62,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className='hover:bg-gray-400'
+                                    className='pl-2 hover:bg-yellow-500 text-indigo-900'
                                     onClick={() => [handleClick('Bass'), setDisplay('Basses')]}
                                 >
                                     Basses
@@ -70,7 +71,7 @@ const CategoryDropdown = () => {
                             <MenuItem>
                                 <a
                                     href="#"
-                                    className='hover:bg-gray-400'
+                                    className='pl-2 hover:bg-yellow-500 text-indigo-900'
                                     onClick={() => [handleClick('Sale'), setDisplay('On Sale')]}
                                 >
                                     On Sale

@@ -42,9 +42,11 @@ const typeDefs = `
     _id: ID
     purchaseQuantity: Int
     name: String
+    description: String
     image: String
     price: Float
     quantity: Int
+    cat: String
   }
 
 

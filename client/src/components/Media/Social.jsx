@@ -2,9 +2,9 @@ import { InstagramEmbed, FacebookEmbed } from 'react-social-media-embed';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 const Social = () => {
     return (
-        <div className="min-h-screen w-screen bg-amber-50">
+        <div className="min-h-screen w-screen bg-amber-300">
           <div className="container mx-auto py-10 px-4">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-yellow-500 underline">Follow us on Social Media!</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-amber-50 underline">Follow us on Social Media!</h1>
     
             {/* Social Media Icons */}
             <div className="flex justify-center items-center gap-5">

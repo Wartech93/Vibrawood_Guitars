@@ -10,7 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import { Button } from 'flowbite-react';
 import { FaShoppingCart } from 'react-icons/fa';
 
-const stripePromise = loadStripe('pk_test_51PQbXaP9RsAu0TmjdpZfDJoaOZEcojs1AALCJ4RGCQujmt55e1mobc98hwS3UhQnxvQqiA92NCflx3LlJushkl4E00ByJSKKDb');
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -64,7 +64,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="absolute top-0 right-1 m-4 p-2 cursor-pointer z-10" onClick={toggleCart}>
-        <span className="text-white">
+        <span className="text-white transition-colors duration-300 hover:text-yellow-500">
           <FaShoppingCart size={24}/>
         </span>
       </div>
