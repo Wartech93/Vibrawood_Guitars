@@ -3,7 +3,6 @@ import Cart from "../components/Cart";
 const About = () => {
     return (
         <>
-            <Cart />
             <div className="flex flex-col py-10 px-5 md:px-10 lg:px-20 bg-indigo-950 secondaryFontabout">
 
                 {/* Section 1 */}

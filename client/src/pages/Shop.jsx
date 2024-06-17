@@ -5,7 +5,6 @@ import CategoryDropdown from "../components/CategoryDropdown";
 const Home = () => {
   return (
     <div>
-      <Cart />
       <CategoryDropdown />
       <ProductList />
     </div>

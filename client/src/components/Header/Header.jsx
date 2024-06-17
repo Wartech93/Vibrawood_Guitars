@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import ShowLogin from "./ShowLogin";
-
+import Cart from '../Cart';
 
 function Header() {
     const linkClass = ({ isActive }) => isActive ? 'mb-5 text-indigo-950 pl-4 border-l-4 border-yellow-500' : 'mb-5 text-indigo-950 pl-4 hover:border-l-4 border-yellow-500'
@@ -17,7 +17,7 @@ function Header() {
                 </div>
 
 
-                <ul className="flex lg:flex-col items-start secondaryFont w-24 gap-5 md:flex-row">
+                <ul className="flex lg:flex-col items-start secondaryFontnav w-24 gap-5 md:flex-row">
 
                     <li><NavLink to="/" className={linkClass}>HOME</NavLink></li>
 
@@ -43,8 +43,9 @@ function Header() {
 
                 <div className="h-full flex flex-col justify-start">
 
-                    <div className="flex h-1/3 justify-end mr-20">
+                    <div className="flex h-1/3 justify-end mr-10">
                         <ShowLogin />
+                        <Cart />
                     </div>
 
                     <div className="flex h-1/2 lg:justify-end lg:mr-40 md:justify-center sm:justify-center">
@@ -52,7 +53,7 @@ function Header() {
 
                             <h1 className="lg:text-6xl md:text-5xl mb-2 text-amber-50 mainFont sm:text-4xl">Vibrawood</h1>
                             <p className="mb-5 text-amber-50 pl-8 secondaryFontCustom lg:text-2xl font-medium md:text-xl ">ONE OF A KIND GUITARS</p>
-                            <Link to="/shop" className="text-center lg:pt-1 md:pt-0 bg-amber-50 secondaryFont h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
+                            <Link to="/shop" className="flex justify-center align-center lg:pt-1 lg:text-2xl md:text-xl sm:text-lg bg-amber-50 secondaryFont h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
                                     SHOP
                             </Link>
 
