@@ -72,7 +72,11 @@ function Signup(props) {
                         </div>
                         <TextInput
                             name="email"
-                            required
+                                type="email"
+                                id="email"
+                                placeholder="name@company.com"
+                                onChange={handleChange}
+                                required
                         />
                     </div>
                     <div className='text-indigo-950'>
@@ -80,8 +84,12 @@ function Signup(props) {
                             <p>First Name:</p>
                         </div>
                         <TextInput
-                            name="firstName"
-                            required
+                           name="firstName"
+                                type="firstName"
+                                id="firstName"
+                                placeholder="First Name"
+                                onChange={handleChange}
+                                required
                         />
                     </div>
                     <div className='text-indigo-950'>
@@ -90,7 +98,11 @@ function Signup(props) {
                         </div>
                         <TextInput
                             name="lastName"
-                            required
+                                type="lastName"
+                                id="lastName"
+                                placeholder="Last Name"
+                                onChange={handleChange}
+                                required
                         />
                     </div>
                     <div className='text-indigo-950'>
@@ -99,8 +111,10 @@ function Signup(props) {
                         </div>
                         <TextInput 
                         placeholder="*********"
-                        id="pwd" 
-                         onChange={handleChange} required />
+                                name="password"
+                                type="password"
+                                id="pwd"
+                                onChange={handleChange} required />
                     </div>
                     <div className="flex justify-between text-indigo-950">
                         <div className="flex items-center gap-2">
