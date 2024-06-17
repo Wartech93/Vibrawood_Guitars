@@ -8,16 +8,16 @@ function Header() {
 
     return (
 
-        <header className="h-1/2 bg-amber-50 flex">
+        <header className="h-1/2 bg-amber-50 flex lg:flex-row md:flex-col md:flex-wrap">
 
-            <div className="flex flex-col justify-evenly content-center items-center h-full w-1/5">
+            <div className="flex lg:flex-col md:flex-row sm:flex-row lg:justify-evenly md:justify-between content-center items-center lg:h-full md:h-1/4 w-1/5">
 
-                <div className="h-1/3 flex justify-around items-center">
+                <div className="lg:h-1/3 flex justify-around items-center">
                     <img className="h-full" src="/images/logo.png"></img>
                 </div>
 
 
-                <ul className="flex flex-col items-start secondaryFont w-24 gap-5">
+                <ul className="flex lg:flex-col items-start secondaryFont w-24 gap-5 md:flex-row">
 
                     <li><NavLink to="/" className={linkClass}>HOME</NavLink></li>
 
@@ -33,7 +33,7 @@ function Header() {
 
             {/* backgroud image div */}
             <div
-                className="w-4/5"
+                className="lg:w-4/5 lg:h-full md:h-3/4 md:w-full"
                 style={{
                     backgroundImage: `url('/images/guitar-play.jpg')`,
                     backgroundSize: 'cover', // Adjust the background image size
@@ -47,11 +47,11 @@ function Header() {
                         <ShowLogin />
                     </div>
 
-                    <div className="flex h-1/2 justify-end mr-40">
+                    <div className="flex h-1/2 lg:justify-end lg:mr-40 md:justify-center">
                         <div className="flex flex-col">
 
-                            <h1 className="text-6xl mb-2 text-amber-50 mainFont">Vibrawood</h1>
-                            <p className="mb-5 text-amber-50 pl-8 secondaryFont">ONE OF A KIND GUITARS</p>
+                            <h1 className="lg:text-6xl md:text-4xl mb-2 text-amber-50 mainFont">Vibrawood</h1>
+                            <p className="mb-5 text-amber-50 md:secondaryFontCustom md:text-lg pl-8 lg:secondaryFont">ONE OF A KIND GUITARS</p>
                             <Link to="/shop" className="text-center bg-amber-50 secondaryFont h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
                                     SHOP
                             </Link>

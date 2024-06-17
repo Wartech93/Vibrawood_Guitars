@@ -6,6 +6,9 @@
     display: none;
 }
 
+.secondaryFontCustom {
+   font-family: 'Kanit';
+}
 
 .mainFont {
     font-family: 'Rock Salt'
