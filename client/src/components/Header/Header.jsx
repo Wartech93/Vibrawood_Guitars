@@ -53,6 +53,7 @@ function Header() {
 
                             <h1 className="lg:text-6xl md:text-5xl mb-2 text-amber-50 mainFont sm:text-4xl">Vibrawood</h1>
                             <p className="mb-5 text-amber-50 pl-8 secondaryFontCustom lg:text-2xl font-medium md:text-xl ">ONE OF A KIND GUITARS</p>
+
                             <Link to="/shop" className="flex justify-center align-center lg:pt-1 lg:text-2xl md:text-xl sm:text-lg bg-amber-50 secondaryFont h-1/5 rounded hover:bg-transparent border-2 border-white-500 text-yellow-500">
                                     SHOP
                             </Link>
