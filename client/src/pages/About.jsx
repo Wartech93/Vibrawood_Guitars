@@ -1,4 +1,3 @@
-import Cart from "../components/Cart";
 
 const About = () => {
     return (
