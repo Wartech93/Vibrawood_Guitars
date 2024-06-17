@@ -20,11 +20,11 @@ const CategoryDropdown = () => {
     const linkClass = 'cursor-pointer text-indigo-950 hover:text-yellow-500'
 
     return (
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center py-10 bg-amber-300'>
             <Menu as="div" className="relative inline-block text-left">
                 <div className='flex items-center'>
-                <p className='mr-2 text-indigo-900 secondaryFontCustom'>Filter</p>
-                    <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-2 text-sm font-semibold text-indigo-950 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                <p className='mr-2 text-amber-50 secondaryFontCustom'>Filter</p>
+                    <MenuButton className="inline-flex w-full justify-center rounded-md bg-amber-50 px-2 text-sm font-semibold text-indigo-950 hover:bg-indigo-950 hover:text-amber-50">
                         {display}
                         <p>▾</p>
                     </MenuButton>
