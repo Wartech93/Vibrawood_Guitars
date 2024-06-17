@@ -38,14 +38,16 @@ function Login(props) {
     <>
       <Button className='w-13 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500' onClick={() => setOpenModal(true)}>Login</Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
+        <div className="bg-amber-50 rounded-2xl">
         <Modal.Header />
         <Modal.Body >
-          <form onSubmit={handleFormSubmit}>
-            <div className="space-y-4 p-4">
-              <h3 className="text-xl font-medium text-gray-900 dark:text-white">Login</h3>
-              <div>
+          <form className='bg-amber-50' onSubmit={handleFormSubmit}>
+            <div className="space-y-4 p-4 bg-amber-50">
+              <h3 className="text-2xl font-medium text-indigo-950 pb-5 text-center">Login</h3>
+
+              <div className="pb-5">
                 <div className="mb-2 block">
-                  <Label htmlFor="email" value="Your email" />
+                  <p>Email:</p>
                 </div>
                 <TextInput
                   id="email"
@@ -55,9 +57,10 @@ function Login(props) {
                   required
                 />
               </div>
+
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="password" value="Your password" />
+                  <p>Password:</p>
                 </div>
                 <TextInput
                   id="password"
@@ -67,25 +70,23 @@ function Login(props) {
                   required />
               </div>
               <div className="flex justify-between">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 pb-5">
+                  <p>Remember me</p>
                   <Checkbox id="remember" />
-                  <Label htmlFor="remember">Remember me</Label>
                 </div>
               </div>
-              <div className="w-full">
-                <button type="submit">Log in</button>
-              </div>
-              <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
-                Not registered?&nbsp;
+              <div className="flex justify-between text-sm font-medium text-amber-50 w-full">
+              <button className="border rounded-md py-1 px-4 bg-indigo-950 hover:bg-yellow-500" type="submit">Log in</button>
                 <Link to="/signup">
-                  <Button onClick={()=> onCloseModal() } href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
-                    Create account
+                  <Button onClick={()=> onCloseModal() } href="#" className=" bg-indigo-950 hover:bg-yellow-500 text-amber-50">
+                  Not registered?
                   </Button>
                 </Link>
               </div>
             </div>
           </form>
         </Modal.Body>
+        </div>
       </Modal>
     </>
   );
