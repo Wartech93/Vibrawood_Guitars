@@ -7,9 +7,9 @@
     "start": "node server --ignore client",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\" \"npm run seed\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
+    "seed": "node server/config/seeds.js",
     "build": "cd client && npm run build",
-    "render-build":"npm install && npm run build"
+    "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^2.0.4",
     "@heroicons/react": "^2.1.3",
-    "@react-google-maps/api": "^2.19.3",   
+    "@react-google-maps/api": "^2.19.3",
     "flowbite-react": "^0.9.0",
     "react-icons": "^5.2.1",
     "react-social-media-embed": "^2.5.13"
