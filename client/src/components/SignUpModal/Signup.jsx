@@ -41,13 +41,14 @@ function Signup(props) {
             <>
                 <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500' onClick={() => setOpenModal(true)}>Sign Up</Button>
                 <Modal show={openModal} size="md" onClose={onCloseModal} popup>
+                    <div className="bg-amber-50 rounded-lg">
                     <Modal.Header />
                     <Modal.Body>
-                        <div className="space-y-6">
-                            <h3 className="text-xl underline font-medium text-gray-900 dark:text-white">Create Account with Vibrawood Guitars</h3>
-                            <div>
+                        <div className="space-y-6 py-10">
+                            <h3 className="text-xl font-medium text-indigo-950">Create Account with Vibrawood Guitars</h3>
+                            <div className='text-indigo-950'>
                                 <div className="mb-2 block">
-                                    <Label htmlFor="email" />Email:
+                                    <p>Email:</p>
                                 </div>
                                 <TextInput
                                     name="email"
@@ -58,9 +59,9 @@ function Signup(props) {
                                     required
                                 />
                             </div>
-                            <div>
+                            <div className='text-indigo-950'>
                                 <div className="mb-2 block">
-                                    <Label htmlFor="firstName" value="First Name" />First Name:
+                                    <p>First Name:</p>
                                 </div>
                                 <TextInput
                                     name="firstName"
@@ -71,9 +72,9 @@ function Signup(props) {
                                     required
                                 />
                             </div>
-                            <div>
+                            <div className='text-indigo-950'>
                                 <div className="mb-2 block">
-                                    <Label htmlFor="lastName" value="Last Name" />Last Name:
+                                    <p>Last Name:</p>
                                 </div>
                                 <TextInput
                                     name="lastName"
@@ -84,9 +85,9 @@ function Signup(props) {
                                     required
                                 />
                             </div>
-                            <div>
+                            <div className='text-indigo-950'>
                                 <div className="mb-2 block">
-                                    <Label htmlFor="password" value="Your password" />
+                                    <p>Your Password:</p>
                                 </div>
                                 <TextInput 
                                 placeholder="*********"
@@ -95,16 +96,16 @@ function Signup(props) {
                                 id="pwd" 
                                  onChange={handleChange} required />
                             </div>
-                            <div className="flex justify-between">
+                            <div className="flex justify-between text-indigo-950">
                                 <div className="flex items-center gap-2">
+                                <p>Remember me</p>
                                     <Checkbox id="remember" />
-                                    <Label htmlFor="remember">Remember me</Label>
                                 </div>
                             </div>
                             <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
             
                                 <Link to="/">
-                                <Button  onClick={handleFormSubmit} className="text-cyan-700 hover:underline dark:text-cyan-500">
+                                <Button  onClick={handleFormSubmit} className="text-amber-50 bg-indigo-950 hover:bg-yellow-500">
                                     Create account
                                 </Button>
                                 </Link>
@@ -112,6 +113,7 @@ function Signup(props) {
                         </div>
                     
                     </Modal.Body>
+                    </div>
                 </Modal>
             </>
         );
