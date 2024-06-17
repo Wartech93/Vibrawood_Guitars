@@ -20,6 +20,12 @@
     font-weight: 600;
  }
 
+ .secondaryFont {
+   font-family: 'Kanit';
+   font-size: 1rem;
+   font-weight: 600;
+}
+
  .secondaryFontlite {
     font-family: 'Kanit';
     font-size: 1.6rem;
