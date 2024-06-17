@@ -39,7 +39,7 @@ function Signup(props) {
 
         return (
             <>
-                <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500 text-yellow-500' onClick={() => setOpenModal(true)}>Sign Up</Button>
+                <Button className='w-13 text-yellow-400 bg-amber-50 hover:bg-transparent border-2 border-white-500' onClick={() => setOpenModal(true)}>Sign Up</Button>
                 <Modal show={openModal} size="md" onClose={onCloseModal} popup>
                     <Modal.Header />
                     <Modal.Body>
