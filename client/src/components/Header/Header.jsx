@@ -10,7 +10,7 @@ function Header() {
 
         <header className="h-1/2 bg-amber-50 flex lg:flex-row md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap xs:flex-col xs:flex-wrap">
 
-            <div className="flex lg:flex-col md:flex-row sm:flex-row justify-evenly content-center items-center lg:h-full md:h-1/4 sm:h-1/4 w-1/5 sm:justify-center">
+            <div className="flex lg:flex-col md:flex-row sm:flex-row lg:justify-evenly content-center items-center lg:h-full md:h-1/4 sm:h-1/4 w-1/5 sm:justify-center">
 
                 <div className="lg:h-1/3 flex justify-around items-center sm:h-">
                     <img className="h-full" src="/images/logo.png"></img>

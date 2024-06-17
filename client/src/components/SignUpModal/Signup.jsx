@@ -45,7 +45,7 @@ function Signup(props) {
                     <Modal.Header />
                     <Modal.Body>
                         <div className="space-y-6 py-10 px-5">
-                            <h3 className="text-xl font-medium text-indigo-950">Create Account with Vibrawood Guitars</h3>
+                            <h3 className="flex justify-center text-xl font-medium text-indigo-950 pb-5">Create an Account</h3>
                             <div className='text-indigo-950'>
                                 <div className="mb-2 block">
                                     <p>Email:</p>
