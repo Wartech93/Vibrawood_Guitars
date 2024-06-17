@@ -13,7 +13,8 @@ function Login(props) {
   const [password, setPassword] = useState('');
   const [login, { error }] = useMutation(LOGIN);
 
-
+  const [loginFailed, setLoginFailed] = useState(false);
+  
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -26,6 +27,7 @@ function Login(props) {
       Auth.login(token);
       onCloseModal();
     } catch (e) {
+      setLoginFailed(true);
       console.log('error', e);
     }
   };
@@ -44,7 +46,7 @@ function Login(props) {
           <form className='bg-amber-50' onSubmit={handleFormSubmit}>
             <div className="space-y-4 p-4 bg-amber-50">
               <h3 className="text-2xl font-medium text-indigo-950 pb-5 text-center">Login</h3>
-
+              {loginFailed ? (<p className='text-red-500'>Please enter correct login information.</p>) : null}
               <div className="pb-5">
                 <div className="mb-2 block">
                   <p>Email:</p>
